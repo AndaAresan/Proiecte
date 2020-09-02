@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>Homework IV</title>
+
+        <style>
+            .flex-container {
+                display:flex;
+                background-color: white;
+                flex-direction: column;
+                height: 100vh;
+            }
+
+            .flex-container2 {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                height:80vh;
+            }
+
+            .red {
+                background-color: red;
+                height: 10vh;
+            }
+
+            .blue {
+                flex-grow: 1;
+                height: 80vh;
+                background-color: blue;
+            }
+
+            .yellow {
+                flex-grow:2;
+                width: 80vh;
+                background-color: yellow;
+            }
+
+            .green {
+                background-color: green;
+                width: 100vw;
+                align-self: flex-end;
+                height:10vh;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="flex-container">
+
+            <div class="red"></div>
+
+            <div class="flex-container2">
+            <div class="blue"></div>
+            <div class="yellow"></div>
+            <div class="green"></div>
+            </div>
+
+        </div>
+
+    </body>
+
+</html>

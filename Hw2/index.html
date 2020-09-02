@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Homework II</title>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>My Data</legend>
+                      <label><input type="radio" value="mr" name="contactBy" /> Mr. </label>
+                      <label><input type="radio" value="mrs" name="contactBy" /> Mrs. </label>
+                      <label><input type="radio" value="miss" name="contactBy" /> Miss </label>
+                      <label><input type="radio" value="dr" name="contactBy" /> Dr. </label>
+                      <p>
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" id="name" placeholder="Name" />
+                      </p>
+                      <p>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="Email" />
+                      </p>
+                      <p>
+                          <label for="phone">Phone:</label>
+                          <input type="number" name="phone" id="phone" placeholder="Phone" min="0"/>
+                      </p>
+            </fieldset>
+            <fieldset>
+                <legend>Delivery address</legend>
+                <label for="county">County</label>
+<select name="county">
+    <option>County</option>
+    <option value="c">Cluj</option>
+    <option value="s">Salaj</option>
+    <option value="b">Brasov</option>
+    <option value="h">Hunedoara</option>
+    <option value="A">Alba</option>
+    <option value="sm">Satu Mare</option>
+</select>
+<p>
+<label for="city">City</label>
+<select name="city">
+    <option>City</option>
+    <option value="c">Cluj-Napoca</option>
+    <option value="z">Zalau</option>
+    <option value="b">Brasov</option>
+    <option value="d">Deva</option>
+    <option value="a">Alba-Iulia</option>
+    <option value="sm">Satu Mare</option>
+</select>
+</p>
+<p>
+    <label for="address">Address</label>
+    <textarea name="address" id="address" rows="5" cols="100"></textarea>
+</p>
+            </fieldset>
+            <fieldset>
+                <legend>Terms and conditions</legend>
+                <label>
+                    <input type="checkbox" name="acceptTerms">I agree the terms and conditions.
+                </label>
+            </fieldset>
+            <label>
+                <input type="submit" value="Save"/>
+            </label>
+        </form>
+    </body>
+</html>
