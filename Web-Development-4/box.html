@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Box Model</title>
+        <style>
+            body {
+                height: 500px;
+            }
+            div {
+                /* In cazul in care alegem sa folosim % la hight, div-ul o sa ia procentul din marimea totala body-ului. */
+                height: 30%;
+                border: 1px #000000 solid;
+                /* margin is outside border */
+                margin-top: 50px;
+                /* padding is inside border */
+                padding-top: 50px;
+                margin: 10px 20px 20px 10px;
+                /* 1st-top, 2nd-right, 3rd-bottom, 4th-left */
+                border-radius: 10px;
+                /* Asa facem border-ul rotund, 50% este rotund perfect */
+                margin: 0px auto;
+                /* Auto calculeaza singur cat sa se duca pana in capat */
+                box-shadow:4px 4px 8px red;
+                /* Al 3-lea element (8px) se numeste blur */
+            }
+
+            .percent-box {
+                /* Procentul face ca pagina sa se muleze in functie de cat de mare este ecranul pe care este vazut */
+                width: 33%;
+            }
+
+            .pixel.box {
+                /* Pixeli raman la fel indiferent de marimea ecranului */
+                width: 700px;
+            }
+        </style>
+        <body>
+            <!--Daca folosim 100vh in combinatie cu o imagine, la height la body, imaginea apare pe toata pagina-->
+            <!--Click dreapta oriunde pe pagina, deschidem Inspect.-->
+            <div class="percent-box">
+                Boxed
+            </div>
+            <div class="pixel-box">
+                Pixel Box
+            </div>
+        </body>
+    </head>
+</html>

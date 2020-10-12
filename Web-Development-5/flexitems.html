@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>Flex Items (Children)</title>
+
+        <style>
+            .flex-container {
+                display:flex;
+                background-color: #f1f1f1;
+                height: 200px;
+            }
+
+            .flex-container div {
+                background-color: dodgerblue;
+                color: white;
+                width: 100px;
+                margin: 10px;
+                text-align: center;
+                font-size: 30px;
+            }
+
+            .flex-container div:hover {
+                color: red;
+            }
+
+            .flex-container div:first-child {
+                order: 3;
+                flex-grow: 2;
+            }
+
+            .flex-container div:last-child {
+                order: 1;
+                flex-basis: 200px;
+            }
+
+            .flex-container div:nth-child(2) {
+                order: 2;
+                flex-shrink: 2;
+                align-self: flex-start;
+            }
+
+            .flex-container div:nth-child(3) {
+                order: 4;
+                /* flex-grow: 8; */
+                flex: 8 0 200px
+            }
+
+            /* flex-grow - cu cat sa fie itemul mai mare decat celelalte iteme */
+            /* flex-shrink - cu cat sa fie itemul mai mic decat celelalte iteme */
+            /* flex-basis - ne lasa sa spunem lungimea de baza a unui item inainte sa facem ecranul mai mic sau mai mare */
+            /* flex - ne lasa sa combinam flex-grow, flex-shrink si flex-basis intr-unul singur */
+            /* align-self pe copii alineaza doar elementul specificat */
+            /* .flex-container div:hover ne ajuta sa adaugam efecte de interactiune itemelor */
+
+        </style>
+    </head>
+
+    <body>
+
+        <div class="flex-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,12 @@
+div{
+    width: 1200px;
+    height: 800px;
+    background-color: #000000;
+    background-image: url(https://www.pngfind.com/pngs/m/103-1036487_white-laptop-png-transparent-png.png);
+    /* background-size: cover; */
+    /* CTRL+/ pune comment instantaneu */
+    background-position: top center;
+    /* Asa facem imaginea sa nu apara de mai multe ori in background */
+    background-repeat: no-repeat;
+
+}

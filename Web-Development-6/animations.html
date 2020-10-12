@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animation</title>
+        <style>
+            /* ca sa definim o animatie trebuie sa definim key frames= momente in timp la care vrem sa schimbam ceva */
+            /* @keyframes example { */
+                /* from:{ */
+                    /* initial state */
+                    /* background-color:red; */
+​
+                /* } */
+                /* to{ */
+                    /* final state */
+                    /* background-color: blue; */
+                /* } */
+            /* } */
+            @keyframes example{
+                0%{
+                    background-color: red;
+​
+                }
+                25%{
+                    background-color: yellow;
+                }
+                50%{
+                    background-color: blue;
+                }
+                
+                60%{
+                    background-color: pink;
+                
+                }
+                80%{
+                    background-color: grey;
+                }
+                100%{
+                    background-color: green;
+                }
+            }
+            div{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                animation-name: example;
+                /* animation-duration: 10s; */
+                /* trebuie neaparat definit in div animation name- cel de la key frame si animation-duration, procentul este din durata- ca timp*/
+                /* animation-delay: 2s; */
+                /* animation-iteration-count: 3; de cate ori sa se ruleze animatia- ca sa se ruleze la infinite-scriem infinite */
+                /* animation-direction: reverse; by default e forward */
+                /* animation-timing-function: linear; */
+                /* animation-fill-mode: backwards;soarele sa ramana apus */
+                /* toate acestea se pot scrie intr-o sg functie- numele, delay, timing-function, iteration count,direction */
+                animation: example 4s linear 2s infinite reverse;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+​
+        </div>
+    </body>
+</html>

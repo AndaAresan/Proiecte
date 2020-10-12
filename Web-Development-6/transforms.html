@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Transforms</title>
+        <style>
+            /* transform translate(vertical, orizontal) ne ajuta sa mutam div-ul*/
+            /* transform rotate(degree) ne ajuta sa rotim div-ul, putem folosi si -20deg si o sa se roteasca invers acelor de ceasornic */
+            /* transform scale(width, height) */
+            div {
+                width: 100px;
+                height: 100px;
+                background-color: dodgerblue;
+                /* transform: translate(50px, 100px); */
+                /* transform: rotate(20deg); */
+                /* transform: scale(0.5, 3); */
+                transform: translate(50px, 100px) rotate(20deg) scale(2,3);
+                transition: transform 2s;
+            }
+
+            div:hover {
+                transform: scale(2, 2);
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+    </body>
+</html>

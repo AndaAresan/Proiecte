@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grid</title>
+        <style>
+            /* flex wrap ca sa fie patratele consecutive */
+            /* folosim auto la margin ca sa facem contentul sa ocupe tot centrul automat */
+            /* max-width "atata timp cat nu depasesti valoarea de aici, poti sa te desfasori" */
+            .container{
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                max-width: 1080px;
+                margin: 40px auto;
+                justify-content: center;
+            }
+            /* .container div ne lasa sa aplicam elementele de css tuturor div-urilor din interiorul sau!!!! */
+            /* calc o sa calculeze care este dimensiunea parintelui si o sa ne ajute sa aliniem copii dupa bunul plac */
+            /* la calc am pus 5 care reprezinta faptul ca vrem sa avem 5 elemente pe un rand, daca scriem 6 avem 6, etc */
+            .container div {
+                width: calc((100% - 100px) / 5);
+                height: 100px;
+                background-color: #ac65ec;
+                margin: 10px;
+            }
+
+/* media screen ne lasa sa modificam cum o sa se vada elementele pe tableta/telefon (tableta in acest caz) */
+            @media screen and (max-width: 768px) {
+                .container div {
+                    width: calc((100% - 100px) / 3)
+                }
+            }
+
+/* la max-width trebuie sa punem mereu valoarea absoluta (in px), nu % */
+/* valoarea normala a unui telefon in max-width este de 375px, dar am folosit 500px din cauza rezolutiei laptop-ului */
+            @media screen and (max-width: 550px) {
+                .container div {
+                    width: calc(100% - 20px);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+        </div>
+    </body>
+</html>

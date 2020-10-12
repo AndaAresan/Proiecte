@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Structure</title>
+    </head>
+    <body>
+        <!--This section is about header.-->
+        <h1>This is used fot titles.</h1>
+        <h2>This is used for subtitles.</h2>
+        <h6>This is the smallest heading.</h6>
+
+<!--This section is about paragraphs.-->
+        <p>This is used mostly for multi-line texts.</p>
+
+        <p>This is again used for multi-line texts.</p>
+
+<!--Span is just like paragraphs, but the text is continuously.-->
+        <span>This is used for labels.</span>
+        <span>This is again used for labeles.</span>
+        <i>This is an italic text.</i>
+        <b>This is a bold text.</b>
+
+<!--This section is about how to make text italic or bold.-->
+        <b><i>This is both bold and italic.</i></b>
+        <b><p>This is a bolded paraghraph.</p></b>
+        <p><i>This is an italic paraghraph.</i></p>
+
+<!--This is how to make only part of the text italic or bold.-->>
+            <p><i>This part is italic.</i>
+            This is not italic.
+        </p>
+    
+        <p>My cat is 
+            <b>very grumpy</b>.
+        </p>
+
+<!--Div has no gap between the paragraphs, if we use <p></p> it creates a gap.-->
+        <div>
+            <span>This a span.</span>
+            <p>This paragraph will make div bigger, if not text has no gap.</p>
+        </div>
+        <div>
+            <span>This is another span.</span>
+        </div>
+
+<!--LISTS-->
+        <p>Lista ordonata:</p>
+        <ol>
+            <li>Milk</li>
+            <li>Meat</li>
+            <li>Eggs</li>
+        </ol>
+
+        <p>Lista neordonata:</p>
+        <ul>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+        </ul>
+
+<!--MEDIA ELEMENTS-->
+
+<!--img src closes with a simple /> at the end.-->
+        <img
+        width="300"
+        height="300"
+         src="https://img.favpng.com/14/0/16/bulbasaur-ivysaur-squirtle-venusaur-charmander-png-favpng-2JDAkQF0tHEjR2y5X4b5xdjhG.jpg" 
+         />
+
+         <!--This section is about audiom, it closes just like img src.-->
+         <p>
+             <!--We can use audio preload controls autoplay to annoy the users,-->
+         <audio preload controls>
+             <source 
+             src="https://web-development.s3.eu-central-1.amazonaws.com/bohemian-rhapsody.mp3"
+             type="audio/mpeg"
+             />
+         </audio>
+        </p>
+
+        <!--This section is about video, it closes just like img and audio.-->
+        <video 
+         width="400"
+        height="300"
+         preload controls>
+            <source 
+            src="https://web-development.s3.eu-central-1.amazonaws.com/hand-washing.mp4"
+            type="video/mp4"
+            />
+        </video>
+
+        <!--This is how we use an image from our computer.-->
+        <p>
+        <img
+        width="300"
+        height="300"
+         src="./Web Development 2/image.jpeg" />
+        </p>
+
+        <!--ELEMENTS INTERACTION-->
+
+        <!--This is how we create a button.-->
+        <button>Click me!</button>
+
+        <!--This is how we create a link to other pages.-->
+        <!--This can be a question for an interview.-->
+        <a target="_blank" href="https://www.youtube.com/?gl=RO&hl=ro"> Go to Youtube 
+
+<!--TABLES-->
+
+<table border="1" width="100%">
+    <thead>
+        <tr>
+            <td width="10%">Nr. Crt.</td>
+            <td width="30%">Name</td>
+            <td width="40%">Email</td>
+            <td width="20%">Phone Number</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1.</td>
+            <td>Anda</td>
+            <td>anda_aresan@yahoo.ro</td>
+            <td>(0752) 559-971</td>
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td>Anda</td>
+            <td>anda_aresan@yahoo.ro</td>
+            <td>(0752) 559-971</td>
+        </tr>
+                <tr>
+            <td>3.</td>
+            <td>Anda</td>
+            <td>anda_aresan@yahoo.ro</td>
+            <td>(0752) 559-971</td>
+        </tr>
+    </tbody>
+</table>
+
+<!--iFRAME-->
+<!--It lets us put other websites on our page.-->
+<!--Copiaza codul de incorporat-->
+
+<iframe 
+width="956"
+ height="538"
+  src="https://www.youtube.com/embed/x_yU5H4PhA0"
+   frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+</iframe>
+
+
+    </body>
+</html>

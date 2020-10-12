@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Car driving</title>
+    <style>
+      body {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+      }
+      #car {
+        position: relative; /*this allows us to use top and left*/
+        width: 100px;
+        height: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <img id="car" src="./red-car.png" alt="car" />
+
+    <script>
+      const carElement = document.getElementById("car");
+      let x = 0; // left
+      let y = 0; // top
+
+      document.addEventListener("keydown", (event) => {
+        // event contains details about what happened
+        if (event.code === "ArrowLeft") {
+          x = x - 10;
+        } else if (event.code === "ArrowRight") {
+          x = x + 10;
+        } else if (event.code === "ArrowUp") {
+          y = y - 10;
+        } else if (event.code === "ArrowDown") {
+          y = y + 10;
+        }
+        carElement.style.left = x + "px";
+        carElement.style.top = y + "px";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <!--Here starts the DOM-->
+  <head>
+    <title>Clock (JS Timing events)</title>
+  </head>
+  <body>
+    <h1 id="clock"></h1>
+    <button onclick="stopWatch()">Stop Time!</button>
+    <script>
+      const timeFunction = () => {
+        const clockElement = document.getElementById("clock");
+        const currentDate = new Date();
+        const currentTime = currentDate.toLocaleTimeString();
+        clockElement.innerText = currentTime;
+      };
+      const timeInterval = setInterval(timeFunction, 1000); // here timeFunction is passed as a reference, timeFunction used like this is also called a callback
+      const stopWatch = () => {
+        clearInterval(timeInterval);
+      };
+
+      setTimeout(() => {
+        alert("Time Passed!");
+      }, 3000);
+    </script>
+  </body>
+</html>

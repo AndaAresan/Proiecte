@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Homework 11 Part I</title>
+    </head>
+    <body>
+        <button id ="button">Hello!</button>
+
+        <script>
+            var button = document.getElementById("button")
+            button.onmouseover = function() {mouseOver()};
+            button.onmouseout = function() {mouseOut()};
+
+            function mouseOver() {
+                button.textContent ="Hovered!";
+            }
+            function mouseOut() {
+                button.textContent ="Hello!";
+            }
+        </script>
+    </body>
+</html>

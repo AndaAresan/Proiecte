@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Array ES6 methods</title>
+    <script>
+      var array = [9, -10, 5, 2, -3, 7];
+      var firstNegativeNumber = array.find((number) => number < 0);
+      var firstNegativeNumberIndex = array.findIndex((number) => number < 0);
+      console.log(firstNegativeNumber, firstNegativeNumberIndex);
+
+      var sum = array.reduce((result, number) => result + number, 0);
+      console.log(sum);
+
+      var doubledNumbers = array.reduce((result, number) => {
+        result.push(number * 2);
+        return result;
+      }, []);
+      console.log(doubledNumbers);
+
+      var numbersA = [1, 2, 3, 4, 5];
+      var numbersB = [6, 7, 8, 9, 10];
+      //   console.log(numbersA.concat(numbersB));
+      console.log([...numbersA, ...numbersB]);
+      console.log([...numbersB, ...numbersA]);
+
+      var obj1 = { hair: "red" };
+      var obj2 = { age: 30 };
+      console.log({ ...obj1, ...obj2 });
+
+      var myFunction = (x, ...y) => {
+        // y is an array
+        console.log(y);
+        return x * y.length;
+      };
+      console.log(myFunction(5, "Hello", 19, true, { key: 9 }, [1, 2, 3, 4]));
+    </script>
+  </head>
+</html>

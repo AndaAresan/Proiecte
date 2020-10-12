@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Responsive Design</title>
+        <!--Tagul meta este vital.-->
+        <!--initial-scale=1.0 un zoom normal-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <style>
+            body {
+                height: 100vh;
+                background-color: tan;
+            }
+
+/* media screen ne aplica un nou stil in cazul in care conditia sau conditiile sunt indeplinite (conditia este in paranteza rotunda) */
+            @media screen and (max-width: 1000px) {
+                body {
+                    background-color: dodgerblue;
+                }
+            }
+
+            @media screen and (max-width:900px) and (min-width: 600px) {
+                body{
+                    background-color: olive;
+                }
+            }
+        </style>
+    </head>
+    <body></body>
+</html>

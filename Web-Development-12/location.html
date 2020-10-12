@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Location (URL) manipulation</title>
+  </head>
+  <body>
+    <p>Location manipulation</p>
+    <button onclick="refresh()">Refresh page</button>
+    <script>
+      const href = window.location.href;
+      console.log("Href/WholeURL: ", href);
+      console.log("Hostname: ", location.hostname);
+      console.log("Pathname: ", location.pathname);
+
+      //   location.assign("https://google.com");
+      const refresh = () => {
+        location.reload();
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <title>Fun with Forms</title>
+   </head> 
+   <body>
+       <form>
+           <!--Fieldset creeaza un chenar in jurul casutelor-->
+           
+        <fieldset>
+            <legend>Personal Data</legend>
+           <!--input creeaza o casuta in care putem scrie ce vrem noi-->
+           <!--lable eticheteaza fiecare casuta, ajuta utilizatorii-->
+           <label for="Name"> Name: </label>
+           <input name="Name" type="text" placeholder="Name..." />
+
+           <label for="Surname"> Surname: </label>
+           <input name="Surname" type="text" placeholder="Surname..." />
+
+           <label for="Email"> Email: </label>
+           <input name="Email" type="email" placeholder="Email..." />
+
+           <!--cum sa creezi un input de parola-->
+           <label for="password">Password:</label>
+           <input name="password" placeholder="Your password..." type="password" />
+
+           <label for="Phone"> Phone: </label>
+           <input name="Phone" type="number" placeholder="Phone..." min="0" />     
+
+           <p>
+           <label for="file">Choose a file:</label>
+           <input name="file" type="file" placeholder="Choose a file..."  />
+           </p>
+        </fieldset>
+
+           <!--Asa creem un input de tip text-->
+           <fieldset>
+            <legend>About</legend>
+           <label for="Biography">Biography:</label>
+           <textarea rows="10" cols="100" name="Biography"> </textarea>
+           </fieldset>
+
+           <!--la select i se mai spune si drop down-->
+         
+           <fieldset>
+            <legend>Options</legend>
+           <label for="gender">Select gender:</label>
+           <select name="gender">
+            <option value="f">Female</option>
+            <option value="m">Male</option>
+           </select>
+
+           <!--Asa creem un checkbox-->
+           <label>  <input name="Terms" type="checkbox" /> I agree to the terms  </label>
+
+           <label> <input name="rating" type="radio" /> Adult </label>
+           <label> <input name="rating" type="radio"/> Child </label>
+           
+        <!--Prima modalitate de a face un buton-->
+        <button type="reset">
+        Reset Data
+        </button>
+        <!--A doua modalitate de a face un buton-->
+        <input type="Submit" value="This is submit" />
+
+       </form>
+   </body>
+</html>

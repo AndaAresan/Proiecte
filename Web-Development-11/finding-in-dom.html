@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Finding in dom</title>
+    <style>
+      .flex-container {
+        display: flex;
+        width: 90vw;
+        justify-content: center;
+      }
+      .flex-items {
+        width: 100px;
+        height: 100px;
+        background-color: teal;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="my-button">Click me!</button>
+    <a href="google.com">Google</a>
+    <a href="facebook.com">Facebook</a>
+    <div class="flex-container">
+      <!--this is a parent for flex-items-->
+      <div class="flex-items">1</div>
+      <div class="flex-items">2</div>
+      <div class="flex-items">3</div>
+      <!--flex-items here are children of flex-container-->
+    </div>
+    <script>
+      const button = document.getElementById("my-button");
+      console.log(button);
+      button.innerText = "Now don't click me!";
+      const anchors = document.getElementsByTagName("a");
+      console.log(anchors);
+      const flexItems = document.getElementsByClassName("flex-items");
+      console.log(flexItems);
+      for (let index = 0; index < flexItems.length; index++) {
+        // with this we can style using javascript
+        flexItems[index].style.backgroundColor = "red";
+      }
+      const flexContainer = document.getElementsByClassName("flex-container");
+      console.log(flexContainer[0]);
+      //   flexContainer[0].innerHTML = `<h1>here we have a simple text</h1>`; -- not really recommended
+      const newFlexItem = document.createElement("h1"); // here we created an h1 tag element
+      newFlexItem.innerText = "New h1"; // here we added some text to it
+      flexContainer[0].appendChild(newFlexItem);
+
+      flexContainer[0].removeChild(flexItems[0]);
+      anchors[1].href = "https://www.zoomania.ro";
+    </script>
+  </body>
+</html>
