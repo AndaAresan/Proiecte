@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>First Website</title>
+    <script>
+        function direction(event) {
+            var key = event.keyCode ;
+            var car = document.getElementById("car");
+            if (key == 37) {
+            car.style.left = car.offsetLeft - 10 + "px";
+            }
+        }
+        document.addEventListener ("keydown" , direction);
+    </script>
+</head>
+
+    <body>
+        <h1 style="color:royalblue;font-style: italic;">This is my first header.</h1>
+        <img 
+        id="car"
+        style="width: 300px;
+         height: 400;
+         position: absolute;
+         top: 200px;
+         left: 200px;" src="https://freesvgplanet.com/wp-content/uploads/2019/10/pokemon-svg-free-30195-758x505.jpg"/>
+    </body>
+</html>

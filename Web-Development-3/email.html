@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Email Time!</title>
+    </head>
+    <body>
+        <form action="https://i2ttd7amf5.execute-api.eu-central-1.amazonaws.com/default/send-email-app-sendEmailLambdaFunction-I39DCJWWUS2Y" 
+              method="POST">
+            <label for="fromName"> Who is sending this:</label>
+            <input type="text" name="fromName"/>
+            <br />
+            <label>
+            Who will recieve this email:<input type="email" name="toEmail" />
+            </label>
+            <br />
+            <label>
+                Subject: <input type="text" name="Subject" />
+            </label>
+            <br />
+            <label for="message">Message:
+            <textarea rows="6" name="message"></textarea>
+            </label>
+
+            <button type="submit">
+                Send email
+            </button>
+        </form>
+    </body>
+</html>

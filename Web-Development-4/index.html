@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Css - Introduction</title>
+        <!--2nd type of styling is using <style> (better one)-->
+            <!--Daca folosim de 2 ori (ex:<p>) in stilizat, se v-a lua in considerare doar ultimul cod scris-->
+            <!--Indiferent de ce s-a scris inainte, putem schimba stilul paginii rescriind codul mai jos.-->
+            <!--Selectorii se separa prin virgula.-->
+            <!--Comentariile in css se scriu /* ca sa il deschidem si */ ca sa il inchidem-->
+            <!--Ca sa fie mai usor de vazut, comentariile in css se scriu cu * in cazul in care avem o idee mai lunga de comunicat-->
+        <style>
+            /* This is a comment in css.*/
+            p {
+                font-size: 32px;
+            }
+
+/*
+*This is a multiline comment
+*This is a multiline comment
+*This is a multiline comment
+*/
+            #biography {
+                color:green;
+                font-size: 24px;
+            }
+
+            .italic-text {
+                font-style: italic;
+                text-align: right;
+            }
+
+            p{
+                color:purple;
+            }
+
+            h1, h2, p {
+                color:red;
+            }
+
+            .center {
+                text-align: center;
+            }
+
+/*This is how we style a list */
+            li{
+                list-style-type: none;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <!--1st type of styling is using <p style="color: red"> for example-->
+        <p class="italic-text center">
+            This is my styled paragraph.
+        </p>
+
+        <!--id-ul se foloseste doar o singura data, nu se poate folosi la alt tag, pagina nu o sa stie pe care sa-l foloseasca-->
+        <p id="biography">
+            This is my second styled paragraph.
+        </p>
+
+        <!--We will style the class by using .classname { and what we want to style.-->
+        <h1 class="italic-text">
+            This is my header.
+        </h1>
+        <h2>
+            This is my subtitle
+        </h2>
+
+        <ul>
+            <li>First item</li>
+            <li>Second item</li>
+        </ul>
+
+    </body>
+</html>

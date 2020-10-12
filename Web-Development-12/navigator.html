@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Navigator object</title>
+  </head>
+  <body>
+    <p>navigator</p>
+    <script>
+      console.log(navigator.userAgent);
+      console.log(navigator.language);
+      console.log(navigator.languages);
+      navigator.geolocation.getCurrentPosition((coordinates) => {
+        console.log(coordinates.coords);
+      });
+    </script>
+  </body>
+</html>

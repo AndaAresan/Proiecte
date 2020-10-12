@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Transitions</title>
+       <style>
+           /* transition-time-function: ease-out incepe mai greu, se termina mai repede */
+           div {
+               width: 100px;
+               height: 100px;
+               background-color: darkcyan;
+               /* transition-property: width;
+               transition-duration: 2s;
+               transition-timig-function: ease-out;
+               transition-delay: 1s; */
+               transition: width 2s ease-out 1s;
+           }
+
+           div:hover {
+               width: 300px;
+           }
+       </style>
+    </head>
+    <body>
+        <div></div>
+    </body>
+</html>

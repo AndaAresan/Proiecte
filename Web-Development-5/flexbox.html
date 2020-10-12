@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Flexbox</title>
+        
+        <style>
+
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+
+            .flex-container {
+                background-color: dodgerblue;
+                display: flex;
+                /* flex-direction: row;
+                flex-wrap: wrap; */
+                flex-flow: row wrap;
+                justify-content: space-between;
+                height: 200px;
+                align-items: center;
+                align-content: space-between;
+            }
+            /* display: inline pune div-urile consecutiv, atata timp cat este inline noi nu putem seta height si width */
+            /* display: inline-block proprietatile height si width pot fi modificate */
+            /* display:flex ne lasa div-ul sa mearga pana in capat, dar pe copii, chiar daca sunt div-uri, ii pune unul dupa celalalt */
+
+            /* display-flex putem folosi directions(top, bottom, left, right) */
+            /* flex-direction: row - unul dupa celalalt, crescator */
+            /* flex-direction: column - una sub celalalta, crescator 3*/
+            /* flex direction: row-reverse - unul dupa celalalt, descrescator */
+            /* flex-direction: column-reverse - unul sub celalalt, descrescator */
+
+            /* flex-wrap: wrap ne muta automat div-urile pe un nou rand daca facem chenarul site-ului mai mic */
+            /* flex-wrap: no-wrap nu ne muta pe un  nou rand (default) */
+            /* flex-wrap: wrap-reverse ni le muta pe un nou rand descrescator  */
+
+            /* shortcut for flex-direction and flex-wrap */
+
+            /* justify-content ne lasa sa ne aliniem itemele din container si ne lasa sa creem automat spatiere intre itemele noastre*/
+
+            /* align-items ne alineaza itemele, valoarea lui default este stretch*/
+
+            /* align-content ne lasa sa aliniem randurile de flex pe care le avem si sa decidem spatierea dintre ele */
+
+            /* acest nou selector(selector direct) se citeste ca toate div-urile din interiorul flex-containerului */
+            .flex-container div {
+                font-size: 30px;
+                padding: 20px;
+                width: 100px;
+                /* margin: 10 px; */
+                background-color: #f1f1f1;
+            }
+        </style>
+        
+    </head>
+
+    <body>
+
+        <div class="flex-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>            
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+
+    </body>
+</html>

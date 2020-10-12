@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>I Promise you will understand</title>
+  </head>
+  <body>
+    <h1>Waiting for the phone...</h1>
+    <script>
+      let isMomHappy = true;
+
+      // we created a promise
+      const willIGetNewPhone = new Promise((resolve, reject) => {
+        if (isMomHappy) {
+          // this is identical with if(isMomHappy === true)
+          const phone = {
+            brand: "Nokia",
+            name: "3310",
+            color: "black",
+          };
+          resolve(phone); // fulfilled
+        } else {
+          const reason = new Error("mom is not happy");
+          reject(reason); // reject
+        }
+      });
+
+      // new Promise(function (resolve, reject) {...})
+
+      const showOff = (phone) => {
+        return new Promise((resolve) => {
+          const message = `Hey friend, I have a new ${phone.color} ${phone.brand} ${phone.name}`;
+          resolve(message);
+        });
+      };
+
+      // we consume/use a promise
+      const askMom = () => {
+        console.log("before asking Mom");
+        willIGetNewPhone
+          .then(showOff)
+          .then((fulfilled) => {
+            // yay, we got a new phone
+            console.log(fulfilled);
+            // output: our brag
+          })
+          .catch((error) => {
+            // oops, mom didn't buy it
+            console.log(error.message);
+            // output: 'mom is not happy'
+          });
+        console.log("after asking mom");
+      };
+      askMom();
+      /*
+       * 1. before asking Mom
+       * 2. brag from fulfilled
+       * 3. after asking mom
+       */
+
+      /*
+       * 1. before asking Mom
+       * 2. after asking mom
+       * 3. brag from fulfilled
+       */
+    </script>
+  </body>
+</html>

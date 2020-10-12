@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Local Storage</title>
+  </head>
+  <body>
+    <p id="localStorage"></p>
+    <input placeholder="password" id="password" />
+    <script>
+      class Tiny {
+        constructor(name) {
+          this.name = name;
+        }
+      }
+      const item = new Tiny("bob");
+      console.log(item);
+      localStorage.setItem("item1", JSON.stringify(item));
+      const itemFromLocalStorage = JSON.parse(localStorage.getItem("item1"));
+      console.log(itemFromLocalStorage.name);
+      // with this we save information in localStorage
+      localStorage.setItem("username", "Cpruteanu");
+      // with this we get information from localStorage
+      const username = localStorage.getItem("username");
+      document.getElementById("localStorage").innerText = username;
+      const passwordInput = document.getElementById("password");
+      passwordInput.addEventListener("input", (event) => {
+        console.log(event.target.value);
+        localStorage.setItem("password", event.target.value);
+      });
+      passwordInput.value = localStorage.getItem("password");
+      // with this we delete from localStorage
+      localStorage.removeItem("username");
+
+      //   sessionStorage.setItem("myTemporaryStuff", "this is temporary");
+      //   console.log(sessionStorage.getItem("myTemporaryStuff"));
+      //   sessionStorage.removeItem("myTemporaryStuff");
+    </script>
+  </body>
+</html>

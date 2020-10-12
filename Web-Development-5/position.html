@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Positions</title>
+        <style>
+            body{
+                height: 2000px;
+            }
+
+            div {
+                width: 100px;
+                height: 100px;
+            }
+
+            /* La un div static pozitiile bottom si left nu exista */
+            #static {
+                background: red;
+                position: static;
+            }
+
+            #relative {
+                background: pink;
+                position: relative;
+                top: 80px;
+                left: 200px;
+            }
+
+            /* Un div absolut este pozitionat in functie de divul anterior. */
+            #absolute {
+                background: blue;
+                position: absolute;
+                top: 250px;
+                left: 500px;
+                /* bottom: 0px;
+                right: 0px; */
+            }
+
+            /* Un fixed div este un div care ne urmareste in functie de cum scrollam pe paigina. */
+            #fixed {
+                background: green;
+                position: fixed;
+                bottom: 0;
+                right: 0;
+            }
+
+            #sticky {
+                background: brown;
+                position:sticky;
+                top: 0;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="static">
+            Static div:
+        </div>
+
+        <div id="relative">
+            Relative div:
+        </div>
+
+        <div id="absolute">
+            Absolute div:
+        </div>
+
+        <div id="fixed">
+            Fixed div:
+        </div>
+
+        <div id="sticky">
+            Sticky div:
+        </div>
+
+    </body>
+</html>

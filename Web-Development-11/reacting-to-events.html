@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Reacting time!</title>
+  </head>
+  <body>
+    <p id="date">Click the button to display the date.</p>
+    <!-- <button id="my-button" onclick="displayDate()">The time is?</button> -->
+    <button id="my-button">The time is?</button>
+    <script>
+      function displayDate() {
+        document.getElementById(
+          "date"
+        ).innerText = new Date().toLocaleDateString();
+      }
+      //   document.getElementById("my-button").onclick = displayDate; // we just passed this to onclick, because if we did displayDate() we would immediatly execute it
+      document
+        .getElementById("my-button")
+        .addEventListener("click", displayDate);
+
+      document
+        .getElementById("my-button")
+        .addEventListener("click", () => console.log("I'm another one"));
+    </script>
+  </body>
+</html>
